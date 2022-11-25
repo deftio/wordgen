@@ -10,15 +10,21 @@ Deploy as a single page website or file:://open should work
 
 Using URL parameters you can control the word generation:
 
-## Examples
-Generate words using 2-letter, 3-letter, and 5-letter lists:
- ../path/to/wordgen/index.html?use=2,3,5
+## Examples (hosted on github pages)
 
-Generate words by combining 3 random words:
- ../path/to/wordgen/index.htmlwordgen/index.html?wpw=3
 
-Combining 3 words from the lists of 2 and 3 letter words:
-../path/to/wordgen/index.htmlwordgen/index.html?wpw=3&use=2,3
+#### Generate words using 2-letter, 3-letter, and 5-letter lists:
+
+[https://deftio.github.io/wordgen/index.html?use=2,3,5](https://deftio.github.io/wordgen/index.html?use=2,3,5)
+
+#### Generate words by combining 3 random words:
+
+[https://deftio.github.io/wordgen/index.html?wpw=3](https://deftio.github.io/wordgen/index.html?wpw=3)
+
+#### Combining 3 words from the lists of 2 and 3 letter words:
+
+[https://deftio.github.io/wordgen/index.html?wpw=3&use=2,3](https://deftio.github.io/wordgen/index.html?wpw=3&use=2,3)
+
 
 
 ## Building etc
