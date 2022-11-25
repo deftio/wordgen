@@ -7,8 +7,7 @@ BSD-2 license
 ## Usage
 Clone via git
 Deploy as a single page website or file:://open should work
-
-Using URL parameters you can control the word generation:
+Using URL parameters you can control the word generation.
 
 ## Examples (hosted on github pages)
 

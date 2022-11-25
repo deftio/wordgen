@@ -40,7 +40,7 @@ Word gen smashes up 2-5 letter words from the scrabble dictionary to make new wo
 
     //wordsall ==> list of words to use e.g. use=2,3,4 means use 2, 3, and 4 letter words
     const wordsall = bw.getURLParam('use','3,4').split(',').map(x=>words['w'+x]).join(",").split(",") // pick word lists to use
-    const wordsPerWord = bw.mapScale(Number(bw.getURLParam("wpw",3)),1,5,1,5); // constrain to between 1 <= wpw <= 5
+    const wordsPerWord = bw.mapScale(Number(bw.getURLParam("wpw",2)),1,5,1,5); // constrain to between 1 <= wpw <= 5
 
     let wg= () => wordsall[bw.random(0,wordsall.length)]; // pick a reandom word from the available word lists
     let gen  = (n)=>".".repeat(n-1).split(".").reduce((s,x)=>s+wg(),"") // combine random words of length n
