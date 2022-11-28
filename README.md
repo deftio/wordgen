@@ -28,3 +28,20 @@ Using URL parameters you can control the word generation.
 
 ## Building etc
 There is no building or bundler - this is a static HTML project written with [bitwrench.js](https://github.com/deftio/bitwrench) and [Bootstrap](https://www.getbootstrap.com)
+
+### Simple use with python3
+
+Make sure you have python3 installed.
+
+Then run this command in the wordgen directory:
+```
+python3 -m http.server 8080
+```
+
+now open your browser:
+
+localhost:8080
+
+to see the web page.
+
+This also works in the AWS cloud9 IDE as a simple demo.
