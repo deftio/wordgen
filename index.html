@@ -48,13 +48,14 @@ Word gen smashes up 2-5 letter words from the scrabble dictionary to make new wo
     let gen  = (n)=>".".repeat(n-1).split(".").reduce((s,x)=>s+wg(),"") // combine random words of length n
     let genX = (n)=>{let a = gen(n); generatedWords.push(a); return a}; // cals gen() and saves the word to global generatedWords
     let hgen = ()=> bw.html({t:"div",a:{"class":"bw-col-2 wbox"},c:genX(wordsPerWord)}) // gen html box around word
-    let rgen = (n)=>bw.html({a:{"class":"bw-row"}, c: ".".repeat(n).split(".").reduce((s,x)=>s+hgen(),"")}) // make row of words html
-    let pgen = (n)=>".".repeat(n).split(".").reduce((s,x)=>s+rgen(5),"") // generate n rows
-    bw.DOM("#words",pgen(20));
     
-    let saveWords = () => {bw.saveClientFile('words.json',generatedWords)};
-    bw.ic
-
+    // next line generate html of 20 rows by 5 columns , writes to div #words
+    bw.DOM("#words",Array(20).fill('.').map(()=> bw.html({a:{"class":"bw-row"},c:Array(5).fill(".").map(
+        ()=>hgen()).join("")}) ).join("")
+        )
+    
+    let saveWords = () => {bw.saveClientFile('words.json',generatedWords)}; // save json button handler
+    
 </script>
 </body>
 </html>
